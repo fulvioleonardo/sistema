@@ -1,0 +1,15 @@
+PROCEDIMIENTO DE ACTUALIZACION FACTURADOR PRO 2
+
+Ya que el FACTURADOR PRO 2 se encuentra instalado dentro de un contenedor DOCKER, debemos ingresar a el, pero primero debemos conocer el identificador
+
+	a. docker ps
+		Aparecera un listado de contenedores, debemos tener en cuenta el identificador del contenedor cuyo nombre tenga la palabra PHP
+	b. docker exec -ti codigodelcontenedordelpasoanterior bash
+	c. Ya habremos ingresado al contenedor, ejecutar el comando git pull origin master
+	d. php artisan migrate --seed
+	e. php artisan tenancy:migrate --seed
+	f. chmod -R 777 storage
+	g. chmod -R 777 bootstrap/cache
+	h. chmod -R 777 vendor/mpdf/mpdf
+	i. php artisan config:cache && php artisan config:clear && php artisan cache:clear
+	
