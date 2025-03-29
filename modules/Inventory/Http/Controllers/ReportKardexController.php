@@ -34,12 +34,12 @@ class ReportKardexController extends Controller
      */
 
     protected $models = [
-        "App\Models\Tenant\Document",
-        "App\Models\Tenant\Purchase",
-        "App\Models\Tenant\SaleNote",
+        \App\Models\Tenant\Document::class,
+        \App\Models\Tenant\Purchase::class,
+        \App\Models\Tenant\SaleNote::class,
         "Modules\Inventory\Models\Inventory",
         "Modules\Order\Models\OrderNote",
-        "App\Models\Tenant\DocumentPos",
+        \App\Models\Tenant\DocumentPos::class,
         Remission::class
     ];
 

@@ -504,7 +504,7 @@ class PurchaseController extends Controller
 
 
 
-    public function xml2array ( $xmlObject, $out = array () )
+    public function xml2array ( $xmlObject, $out =  [] )
     {
         foreach ((array) $xmlObject as $index => $node) {
             $out[$index] = ( is_object ( $node ) ) ?  $this->xml2array($node) : $node;
@@ -525,7 +525,7 @@ class PurchaseController extends Controller
     }
 
     public function DOMtoArray($root) {
-        $result = array();
+        $result = [];
 
         if ($root->hasAttributes()) {
             $attrs = $root->attributes;
@@ -546,13 +546,13 @@ class PurchaseController extends Controller
                 }
 
             }
-            $groups = array();
+            $groups = [];
             foreach ($children as $child) {
                 if (!isset($result[$child->nodeName])) {
                     $result[$child->nodeName] = $this->DOMtoArray($child);
                 } else {
                     if (!isset($groups[$child->nodeName])) {
-                        $result[$child->nodeName] = array($result[$child->nodeName]);
+                        $result[$child->nodeName] = [$result[$child->nodeName]];
                         $groups[$child->nodeName] = 1;
                     }
                     $result[$child->nodeName][] = $this->DOMtoArray($child);

@@ -89,17 +89,17 @@ class AccountController extends Controller
             $user = auth()->user();
     
             $SECRET_API_KEY = "sk_test_gZ9jAaILIsIweKfm";
-            $culqi = new Culqi(array('api_key' => $SECRET_API_KEY));
+            $culqi = new Culqi(['api_key' => $SECRET_API_KEY]);
     
             $charge = $culqi->Charges->create(
-                array(
+                [
                     "amount" => $request->precio,
                     "currency_code" => "PEN",
                     "email" => $request->email,
                     "description" =>  $request->producto, 
                     "source_id" => $request->token,
                     "installments" => $request->installments
-                  )
+                  ]
             );
 
             $account_payment = AccountPayment::find($request->id_payment_account);

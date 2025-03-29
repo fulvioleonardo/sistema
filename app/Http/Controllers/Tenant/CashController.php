@@ -59,7 +59,7 @@ class CashController extends Controller
     {
         $user = auth()->user();
         $type = $user->type;
-        $users = array();
+        $users = [];
 
         switch($type)
         {

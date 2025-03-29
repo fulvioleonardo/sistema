@@ -99,7 +99,7 @@ class DocumentsImportTwoFormat implements ToCollection
                 $subtotal = $row[15];
                 $total_impuesto = $row[16];
                 
-                $json = array(
+                $json = [
                     "serie_documento" => $serie,
                     "numero_documento" => $correlativo,
                     "fecha_de_emision" => $date_document,
@@ -162,7 +162,7 @@ class DocumentsImportTwoFormat implements ToCollection
                             ]
                         ]
                     ]
-                );
+                ];
 
                 if ($row[17] != null) {
                     $unitm = $row[18];

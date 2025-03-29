@@ -525,7 +525,7 @@ trait DocumentTrait
     protected function validarDigVerifDIAN($nit)
     {
         if(is_numeric(trim($nit))){
-            $secuencia = array(3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71);
+            $secuencia = [3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71];
             $d = str_split(trim($nit));
             krsort($d);
             $cont = 0;

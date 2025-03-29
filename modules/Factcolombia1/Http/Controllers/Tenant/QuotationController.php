@@ -232,11 +232,11 @@ class QuotationController extends Controller
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS,($data_document));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$company->api_token}"
-            ));
+            ]);
             $response = curl_exec($ch);
             curl_close($ch);
 
@@ -264,11 +264,11 @@ class QuotationController extends Controller
                 $ch2 = curl_init("{$base_url}ubl2.1/status/zip/{$zip_key}");
                 curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "POST");
-                curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+                curl_setopt($ch2, CURLOPT_HTTPHEADER, [
                     'Content-Type: application/json',
                     'Accept: application/json',
                     "Authorization: Bearer {$company->api_token}"
-                ));
+                ]);
                 $response_status = curl_exec($ch2);
                 curl_close($ch2);
                 
@@ -381,11 +381,11 @@ class QuotationController extends Controller
         $ch2 = curl_init("{$base_url}ubl2.1/invoice/current_number/{$type_service}");
         curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "GET");
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_data = curl_exec($ch2);
         $err = curl_error($ch2);
         curl_close($ch2);

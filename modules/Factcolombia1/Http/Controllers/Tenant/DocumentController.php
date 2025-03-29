@@ -182,13 +182,13 @@ class DocumentController extends Controller
                 curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "POST");
 
                 if(file_exists(storage_path('sendmail.api'))){
-                    curl_setopt($ch2, CURLOPT_POSTFIELDS, json_encode(array("sendmail" => true)));
+                    curl_setopt($ch2, CURLOPT_POSTFIELDS, json_encode(["sendmail" => true]));
                 }
-                curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+                curl_setopt($ch2, CURLOPT_HTTPHEADER, [
                     'Content-Type: application/json',
                     'Accept: application/json',
                     "Authorization: Bearer {$company->api_token}"
-                ));
+                ]);
 
                 $response_status = curl_exec($ch2);
                 curl_close($ch2);
@@ -382,11 +382,11 @@ class DocumentController extends Controller
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS,($data_document));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$company->api_token}"
-            ));
+            ]);
             $response = curl_exec($ch);
             curl_close($ch);
 //\Log::debug($response);
@@ -619,11 +619,11 @@ class DocumentController extends Controller
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS,($data_document));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$company->api_token}"
-            ));
+            ]);
             $response = curl_exec($ch);
             curl_close($ch);
             // return $response;
@@ -834,11 +834,11 @@ class DocumentController extends Controller
         curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch2, CURLOPT_POSTFIELDS,($data_send));
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
 
         $response = curl_exec($ch2);
 //        return ($response);
@@ -887,11 +887,11 @@ class DocumentController extends Controller
         curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch2, CURLOPT_POSTFIELDS,($data_send));
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
 
         $response = curl_exec($ch2);
         $respuesta = json_decode($response);
@@ -953,11 +953,11 @@ class DocumentController extends Controller
 
         curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "GET");
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_data = curl_exec($ch2);
         $err = curl_error($ch2);
         curl_close($ch2);
@@ -979,11 +979,11 @@ class DocumentController extends Controller
 
         curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "GET");
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_data = curl_exec($ch2);
         $err = curl_error($ch2);
         curl_close($ch2);
@@ -1414,11 +1414,11 @@ class DocumentController extends Controller
 
         curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "GET");
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_data = curl_exec($ch2);
         $err = curl_error($ch2);
         curl_close($ch2);
@@ -1648,11 +1648,11 @@ class DocumentController extends Controller
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS,($data_document));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$company->api_token}"
-            ));
+            ]);
             $response = curl_exec($ch);
             curl_close($ch);
 

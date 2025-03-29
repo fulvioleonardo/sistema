@@ -15,17 +15,17 @@ class ViewServiceProvider extends ServiceProvider
     {
         view()->composer(
             'tenant.layouts.partials.header',
-            'App\Http\ViewComposers\Tenant\CompanyViewComposer'
+            \App\Http\ViewComposers\Tenant\CompanyViewComposer::class
         );
 
         view()->composer(
             'tenant.layouts.partials.sidebar',
-            'App\Http\ViewComposers\Tenant\CompanyViewComposer'
+            \App\Http\ViewComposers\Tenant\CompanyViewComposer::class
         );
 
         view()->composer(
             'tenant.layouts.partials.header',
-            'App\Http\ViewComposers\Tenant\UserViewComposer'
+            \App\Http\ViewComposers\Tenant\UserViewComposer::class
         );
 
         view()->composer(
@@ -35,17 +35,17 @@ class ViewServiceProvider extends ServiceProvider
 
         view()->composer(
             'tenant.layouts.partials.header',
-            'App\Http\ViewComposers\Tenant\ModuleViewComposer'
+            \App\Http\ViewComposers\Tenant\ModuleViewComposer::class
         );
 
         view()->composer(
             'tenant.layouts.partials.sidebar',
-            'App\Http\ViewComposers\Tenant\CompanyViewComposer'
+            \App\Http\ViewComposers\Tenant\CompanyViewComposer::class
         );
 
         view()->composer(
             'tenant.layouts.partials.sidebar',
-            'App\Http\ViewComposers\Tenant\ModuleViewComposer'
+            \App\Http\ViewComposers\Tenant\ModuleViewComposer::class
         );
 
         view()->composer(
@@ -55,11 +55,11 @@ class ViewServiceProvider extends ServiceProvider
 
         view()->composer(
             'tenant.layouts.app',
-            'App\Http\ViewComposers\Tenant\CompactSidebarViewComposer'
+            \App\Http\ViewComposers\Tenant\CompactSidebarViewComposer::class
         );
         view()->composer(
             'tenant.layouts.app_pos',
-            'App\Http\ViewComposers\Tenant\CompactSidebarViewComposer'
+            \App\Http\ViewComposers\Tenant\CompactSidebarViewComposer::class
         );
 
         //Ecommerce
@@ -119,17 +119,17 @@ class ViewServiceProvider extends ServiceProvider
 
         view()->composer(
             'tenant.layouts.partials.sidebar_styles',
-            'App\Http\ViewComposers\Tenant\ConfigurationVisualViewComposer'
+            \App\Http\ViewComposers\Tenant\ConfigurationVisualViewComposer::class
         );
 
         view()->composer(
             'tenant.layouts.app',
-            'App\Http\ViewComposers\Tenant\ConfigurationVisualViewComposer'
+            \App\Http\ViewComposers\Tenant\ConfigurationVisualViewComposer::class
         );
 
         view()->composer(
             'tenant.layouts.auth',
-            'App\Http\ViewComposers\Tenant\CompanyViewComposer'
+            \App\Http\ViewComposers\Tenant\CompanyViewComposer::class
         );
 
        /*view()->composer(

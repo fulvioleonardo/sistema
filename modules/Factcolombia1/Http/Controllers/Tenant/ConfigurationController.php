@@ -225,11 +225,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS,($data_initial_number));
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$servicecompany->api_token}"
-        ));
+        ]);
         $response_initial_number = curl_exec($ch);
 
        //return json_encode($response_initial_number);
@@ -298,11 +298,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS,($data_logo));
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$servicecompany->api_token}"
-        ));
+        ]);
 
         $response_logo = curl_exec($ch);
         $err = curl_error($ch);
@@ -358,11 +358,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS,($data_software));
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_software = curl_exec($ch);
         $company->response_software = $response_software;
 
@@ -381,11 +381,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch2, CURLOPT_POSTFIELDS,($data_certificate));
         curl_setopt($ch2, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch2, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
 
         $response_certificate = curl_exec($ch2);
         $company->response_certificate = $response_certificate;
@@ -411,11 +411,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch3, CURLOPT_POSTFIELDS,($data_resolution));
         curl_setopt($ch3, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch3, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch3, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch3, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
 
 
         $response_resolution = curl_exec($ch3);
@@ -449,11 +449,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS,($data_production));
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_change = curl_exec($ch);
         $err = curl_error($ch);
         $respuesta = json_decode($response_change);
@@ -577,11 +577,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS,($data_production));
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_query = curl_exec($ch);
         $err = curl_error($ch);
         $respuesta = json_decode($response_query);
@@ -638,11 +638,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS,($data_software));
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_software = curl_exec($ch);
         $err = curl_error($ch);
         $respuesta = json_decode($response_software);
@@ -697,11 +697,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch2, CURLOPT_POSTFIELDS,($data_certificate));
         curl_setopt($ch2, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch2, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
         $response_certificate = curl_exec($ch2);
         $err = curl_error($ch2);
         $respuesta = json_decode($response_certificate);
@@ -760,11 +760,11 @@ class ConfigurationController extends Controller
         curl_setopt($ch2, CURLOPT_POSTFIELDS,($data_environment));
         curl_setopt($ch2, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch2, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
             "Authorization: Bearer {$company->api_token}"
-        ));
+        ]);
 
         $response_environment = curl_exec($ch2);
         $err = curl_error($ch2);
@@ -826,11 +826,11 @@ class ConfigurationController extends Controller
             curl_setopt($ch3, CURLOPT_POSTFIELDS,($data_resolution));
             curl_setopt($ch3, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($ch3, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_setopt($ch3, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch3, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$company->api_token}"
-            ));
+            ]);
 
             $response_resolution = curl_exec($ch3);
 //            \Log::debug($response_resolution);
@@ -911,7 +911,7 @@ class ConfigurationController extends Controller
 
         //envio 60 facturas
         $json_invoice = '{"number":994688605,"type_document_id":1,"customer":{"identification_number":"323232323","name":"peres","phone":"3232323","address":"sdsdsdsdsd","email":"peres@mail.com","merchant_registration":"No tiene"},"tax_totals":[{"tax_id":1,"percent":"19.00","tax_amount":"57000.00","taxable_amount":"300000.00"}],"legal_monetary_totals":{"line_extension_amount":"300000.00","tax_exclusive_amount":"300000.00","tax_inclusive_amount":"357000.00","allowance_total_amount":"0.00","charge_total_amount":"0.00","payable_amount":"357000.00"},"invoice_lines":[{"unit_measure_id":642,"invoiced_quantity":"1","line_extension_amount":"300000.00","free_of_charge_indicator":false,"tax_totals":[{"tax_id":1,"tax_amount":"57000.00","taxable_amount":"300000.00","percent":"19.00"}],"description":"POLO","code":"2323","type_item_identification_id":3,"price_amount":"13.09","base_quantity":"1.000000"}]}';
-        $response_invoice = array();
+        $response_invoice = [];
        // for ($i=1; $i <=60 ; $i++) {
             $ch = curl_init("{$base_url}ubl2.1/invoice/{$id_test}");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -919,11 +919,11 @@ class ConfigurationController extends Controller
             curl_setopt($ch, CURLOPT_POSTFIELDS,($json_invoice));
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$company->api_token}"
-            ));
+            ]);
 
             $response = curl_exec($ch);
             array_push($response_invoice, $response);
@@ -961,11 +961,11 @@ class ConfigurationController extends Controller
             curl_setopt($ch5, CURLOPT_POSTFIELDS,($data_resolution));
             curl_setopt($ch5, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($ch5, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_setopt($ch5, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch5, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$company->api_token}"
-            ));
+            ]);
 
             $response_credit = curl_exec($ch5);
             $response["credit"] = $response_credit;
@@ -996,11 +996,11 @@ class ConfigurationController extends Controller
             curl_setopt($ch4, CURLOPT_POSTFIELDS,($data_resolution_de));
             curl_setopt($ch4, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($ch4, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_setopt($ch4, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch4, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$company->api_token}"
-            ));
+            ]);
 
             TypeDocument::updateOrCreate([
                 'code' => 5

@@ -65,7 +65,7 @@ class MobileController extends Controller
 
         return [
             'success' => true,
-            'data' => array('customers' => $customers)
+            'data' => ['customers' => $customers]
         ];
 
     }
@@ -120,7 +120,7 @@ class MobileController extends Controller
 
         return [
             'success' => true,
-            'data' => array('items' => $items, 'affectation_types' => $affectation_igv_types)
+            'data' => ['items' => $items, 'affectation_types' => $affectation_igv_types]
         ];
 
     }
@@ -260,7 +260,7 @@ class MobileController extends Controller
 
         return [
             'success' => true,
-            'data' => array('items' => $items)
+            'data' => ['items' => $items]
         ];
     }
 
@@ -294,7 +294,7 @@ class MobileController extends Controller
 
         return [
             'success' => true,
-            'data' => array('customers' => $customers)
+            'data' => ['customers' => $customers]
         ];
     }
 
