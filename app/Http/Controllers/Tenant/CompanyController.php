@@ -116,11 +116,11 @@ class CompanyController extends Controller
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
                 curl_setopt($ch, CURLOPT_POSTFIELDS,($payload));
-                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                curl_setopt($ch, CURLOPT_HTTPHEADER, [
                     'Content-Type: application/json',
                     'Accept: application/json',
                     "Authorization: Bearer {$cor->api_token}"
-                ));
+                ]);
                 $response = curl_exec($ch);
                 curl_close($ch);
 

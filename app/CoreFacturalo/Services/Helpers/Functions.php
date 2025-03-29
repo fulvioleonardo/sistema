@@ -7,7 +7,7 @@ class Functions
     public static function verificationCode($number)
     {
         if ($number !== '' || strlen($number) === 8) {
-            $hash = array(5, 4, 3, 2, 7, 6, 5, 4, 3, 2);
+            $hash = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2];
             $sum = 5;
             for($i = 2; $i < 10; $i++ ) {
                 $sum += ($number[$i-2] * $hash[$i]);

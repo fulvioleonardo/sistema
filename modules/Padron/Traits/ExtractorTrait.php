@@ -48,7 +48,7 @@ trait ExtractorTrait {
     public static function extractZipArchive($archive, $destination){
         // Check if webserver supports unzipping.
         if(!class_exists('ZipArchive')){
-            $GLOBALS['status'] = array('error' => 'Your PHP version does not support unzip functionality.');
+            $GLOBALS['status'] = ['error' => 'Your PHP version does not support unzip functionality.'];
             return false;
         }
     
@@ -60,14 +60,14 @@ trait ExtractorTrait {
             if(is_writeable($destination . '/')){
                 $zip->extractTo($destination);
                 $zip->close();
-                $GLOBALS['status'] = array('success' => 'Files unzipped successfully');
+                $GLOBALS['status'] = ['success' => 'Files unzipped successfully'];
                 return true;
             }else{
-                $GLOBALS['status'] = array('error' => 'Directory not writeable by webserver.');
+                $GLOBALS['status'] = ['error' => 'Directory not writeable by webserver.'];
                 return false;
             }
         }else{
-            $GLOBALS['status'] = array('error' => 'Cannot read .zip archive.');
+            $GLOBALS['status'] = ['error' => 'Cannot read .zip archive.'];
             return false;
         }
     }

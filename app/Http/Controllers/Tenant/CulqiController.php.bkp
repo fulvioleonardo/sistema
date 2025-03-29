@@ -38,10 +38,10 @@ class CulqiController extends Controller
         $user = auth()->user();
 
         $SECRET_API_KEY = "sk_test_gZ9jAaILIsIweKfm";
-        $culqi = new Culqi(array('api_key' => $SECRET_API_KEY));
+        $culqi = new Culqi(['api_key' => $SECRET_API_KEY]);
 
         $charge = $culqi->Charges->create(
-            array(
+            [
                 "amount" => $request->precio,
                 "currency_code" => "PEN",
                 "email" => $request->email,
@@ -52,7 +52,7 @@ class CulqiController extends Controller
                //      "contacto" => $_POST['contacto'],
                //      "telefono" => $_POST['telefono']),
                 "installments" => $request->installments
-              )
+              ]
         );
 
         $order = Order::create([

@@ -95,7 +95,7 @@ class SupportDocumentHelper
                 $invoice_lines = $params['credit_note_lines'];
         else
                 $invoice_lines = $params['invoice_lines'];
-        $new_invoice_lines = array();
+        $new_invoice_lines = [];
         foreach($invoice_lines as $invoice_line){
                 $tax = [['tax_id' => 1, 'tax_amount' => '0.00', 'percent' => '0', 'taxable_amount' => $invoice_line['line_extension_amount']]];
                 $invoice_line['tax_totals'] = $tax;
@@ -236,7 +236,7 @@ class SupportDocumentHelper
     protected function validarDigVerifDIAN($nit)
     {
         if(is_numeric(trim($nit))){
-            $secuencia = array(3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71);
+            $secuencia = [3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71];
             $d = str_split(trim($nit));
             krsort($d);
             $cont = 0;

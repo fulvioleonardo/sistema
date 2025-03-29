@@ -373,10 +373,10 @@ class CompanyController extends Controller
         $ch = curl_init("{$base_url}ubl2.1/config/delete/{$number}/{$email}");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
-        ));
+        ]);
         $response = curl_exec($ch);
         curl_close($ch);
         $respuesta = json_decode($response);
@@ -435,10 +435,10 @@ class CompanyController extends Controller
 
         curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "GET");
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch2, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
-        ));
+        ]);
         $response_data = curl_exec($ch2);
         $err = curl_error($ch2);
         curl_close($ch2);

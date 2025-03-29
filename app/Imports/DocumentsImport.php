@@ -98,7 +98,7 @@ class DocumentsImport implements ToCollection
 
                 //genero json y envio a api para no hacer insert 
                 
-                $json = array(
+                $json = [
                     "serie_documento" => $serie,
                     "numero_documento" => $correlativo,
                     "fecha_de_emision" => $date_create,
@@ -161,7 +161,7 @@ class DocumentsImport implements ToCollection
                             ]
                         ]
                     ]
-                );
+                ];
 
                 if ($row[28] != null) {
                     $new_item = [

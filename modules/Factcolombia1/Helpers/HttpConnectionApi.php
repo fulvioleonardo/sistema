@@ -29,11 +29,11 @@ class HttpConnectionApi
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$this->api_token}"
-            ));
+            ]);
 
             $response = curl_exec($ch);
             $curl_error = curl_error($ch);
@@ -81,11 +81,11 @@ class HttpConnectionApi
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
                 'Accept: application/json',
                 "Authorization: Bearer {$this->api_token}"
-            ));
+            ]);
 
             $response = curl_exec($ch);
             $curl_error = curl_error($ch);

@@ -92,10 +92,10 @@ trait CompanyTrait
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS,($data_companiee));
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
             'Accept: application/json',
-        ));
+        ]);
 
         $response = curl_exec($ch);
         curl_close($ch);
@@ -108,9 +108,9 @@ trait CompanyTrait
     public function runTenantSeeder($request, $response, $company){
 
         //lleno la data maestra
-        \Artisan::call('db:seed', array('--class' => 'DataMasterTenantSeeder'));
+        \Artisan::call('db:seed', ['--class' => 'DataMasterTenantSeeder']);
         //lleno data mestra del servicio
-        \Artisan::call('db:seed', array('--class' => 'DataServiceMasterTenantSeeder'));
+        \Artisan::call('db:seed', ['--class' => 'DataServiceMasterTenantSeeder']);
 
         $user_id = DB::connection('tenant')
             ->table('users')
@@ -254,7 +254,7 @@ trait CompanyTrait
         ]);
 
         //lleno data a la tabla co_cities
-        \Artisan::call('db:seed', array('--class' => 'UpdateCitiesTentantSeeder'));
+        \Artisan::call('db:seed', ['--class' => 'UpdateCitiesTentantSeeder']);
     }
 
 

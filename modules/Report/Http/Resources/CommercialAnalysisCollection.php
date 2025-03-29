@@ -58,7 +58,7 @@ class CommercialAnalysisCollection extends ResourceCollection
             // dd($difference_days);
 
 
-            $calculate_categories_count = array();
+            $calculate_categories_count = [];
             $categories = Category::all()->pluck('name');
             foreach ($categories as $item) {
                 $calculate_categories_count[strtoupper($item)] = 0;

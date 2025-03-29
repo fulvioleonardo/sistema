@@ -26,8 +26,8 @@ class ConfigurationController extends Controller
                         ->table('format_templates')
                         ->truncate();
         $archivos = Storage::disk('core')->allDirectories('Templates/pdf');
-        $colection = array();
-        $valor = array();
+        $colection = [];
+        $valor = [];
         foreach($archivos as $valor){
             $lina = explode( '/', $valor);
             if(count($lina) <= 3){
